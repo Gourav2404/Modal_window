@@ -35,3 +35,13 @@ for (let i = 0 ; i < btnsOpenModal.length ; i++)
   btnCloseModel.addEventListener('click' , closeModel);
 
   overlay.addEventListener('click', closeModel);
+
+document.addEventListener('keydown', function(event){
+  console.log(event.key);
+
+  if (event.key == 'Escape' && !modal.classList.contains('hidden')){
+    // modal.classList.add('hidden');
+    // overlay.classList.add('hidden');
+    closeModel();
+  }
+});
